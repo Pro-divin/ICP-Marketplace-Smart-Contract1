@@ -1,0 +1,12 @@
+
+Understanding the foundational concepts in Internet Computer Protocol (ICP) development is crucial for beginners. Below is a dedicated section explaining essential terms such as "Principal," "Identity," and "Address." These clear definitions will help you grasp the fundamental aspects of ICP without needing to refer to external sources.
+
+Key Terms
+Principal
+A Principal is a unique identifier used in the Internet Computer ecosystem to represent an entity, such as a user, canister, or other application components. It serves as an essential part of the access control mechanism, allowing systems to distinguish between different entities. Principals are typically encoded in a specific format that facilitates secure authentication and authorization.
+
+Identity
+Identity refers to the identity of a user or a system within the Internet Computer network. Each identity is associated with a Principal, which identifies it uniquely in the network. The Identity can provide different levels of permissions and roles, enabling users to authenticate themselves and interact with canisters securely. Identity management is crucial for developing applications where user interactions and data privacy are paramount.
+
+Address
+An Address in the context of ICP refers generally to the location where a canister can be accessed or interacted with. In blockchain terminology, it often specifies an address related to a smart contract or canister that is meant for transactions or communications. An address is usually derived from the Principal and is used to identify where requests should be sent in the network when dealing with canisters.
