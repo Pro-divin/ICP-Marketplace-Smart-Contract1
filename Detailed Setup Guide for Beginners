@@ -1,0 +1,169 @@
+Prerequisites​
+To start  you will need to have the following:
+●      	A connection to the internet.
+●      	A command line interface.
+●      	Visual Studio (VS) Code  
+ 
+ 
+INSTALLATION REQUIREMENTS TO BUILD ON THE  INTERNET COMPUTER
+Ensure you have these  installed in your machine.
+●   Node.js 
+●   dfx
+ 
+ 
+
+DFX, short for "The DFINITY Canister SDK," is a software development kit (SDK) provided by the DFINITY Foundation. It's designed to simplify the development of decentralized applications (Dapps) on the Internet Computer (IC), which is a blockchain-based decentralized network created by DFINITY.
+
+Below are the links and commands you can run in your terminal depending on the type of OS  you are using.(linux,windows or mac)
+ 
+ 
+Linux
+ 
+ 
+NODE INSTALLATION :https://github.com/nodesource/distributions
+ 
+-       	To install node v18 Run this command on your terminal:
+ 
+sudo yum install https://rpm.nodesource.com/pub_18.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+ 
+ 
+ 
+ 
+-       	To Install dfx run this command on your terminal:
+ 
+DFX_VERSION=0.17.0 sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+ 
+ 
+Once its successful then run  this command on your terminal:
+ 
+echo 'export PATH="$PATH:$HOME/bin"' >> "$HOME/.bashrc"
+ 
+ 
+ 
+ 
+ 
+Windows
+We recommend WSL 2 so have that installed.
+ 
+Just Run this command on windows 11
+ 
+ 
+wsl --install
+ 
+ On Windows 10 
+
+Open Microsoft Store.
+Search for a Linux distribution (e.g., Ubuntu) and install it.
+
+Enable WSL Feature:
+
+Open PowerShell as Administrator.
+Run the command:
+ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+Install a Linux Distribution:
+
+Set Up the Installed Distribution:
+
+Launch the installed Linux distribution from the Start menu.
+Complete the initialization steps (setting username and password).
+
+
+ 
+Incase of any challenges setting up follow this link: tutorial:https://docs.google.com/document/d/1Z3AxszTxhnqZHF6_C2ui3MyfIsMeLhjYojdEfmX1_Xo/edit
+ 
+ 
+ 
+-       	WSL 2  INSTALLATION
+ 
+https://learn.microsoft.com/en-us/windows/wsl/install
+ 
+https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/
+ 
+ After installing WSL in your windows pc,  go to the search box in windows then search turn windows features on or off. Then make sure Hyper -v and Windows subsystems for linux are checked, then click okay and your pc will require you restart.
+
+INSTALL NODE IN WSL
+
+First install NVM using this command
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
+After installing nvm  restart your shell and run this command to install node in your WSL
+nvm install node
+ 
+-       	NODE INSTALLATION LINK as Setup
+ https://nodejs.org/en/download
+ 
+-       	dfx
+ 
+ 
+https://internetcomputer.org/docs/current/developer-docs/setup/install/#installing-dfx
+There is no native support for dfx on Windows. However, by installing the Windows Subsystem for Linux (WSL), you can run dfx also on a Windows system as described below.
+ 
+
+ If you are using Windows Subsystem for linux (WSL) , you will need to install the WSL,Remote wsl extensions in your VS Code and connect it to your WSL you have installed in your windows pc.
+ 
+This is the guidance for connecting WSL and VS code 
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack
+ 
+Once you have WSL installed, you can install dfx by running this command below:
+ 
+sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+ 
+
+ 
+
+ 
+
+ 
+Mac
+ 
+-       	Here is an installation  tutorial for mac users https://www.youtube.com/watch?v=fDMHUdo7m-k&t=467s
+ 
+ 
+Ensure you have  macOS 12.* Monterey or later.
+ 
+# Install the Xcode Command Line Tools do this by running:
+ 
+xcode-select --install
+ 
+If you are using a machine running Apple silicon, you will need to have Rosetta installed. You can install Rosetta by running softwareupdate --install-rosetta in your terminal.
+ 
+Node
+https://formulae.brew.sh/formula/node@18
+ 
+dfx
+ 
+ Run this command  on terminal 👍
+sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+ 
+Developer Tasks
+
+After successfully installing node.js,vs code  and dfinity software development kit (dfx)  Now you can build your first DApp ..
+
+On internet computer you can build using  5 available SDKs as it listed below 👍
+  How to  Build First DApp using Motoko
+ 
+  Run this command to create a default DApp with Motoko
+ 
+ 
+ dfx new project_name
+ 
+               How to Build First DApp using Azle
+
+Run this command to create a default DApp with Motoko
+
+ npx azle new project_name 
+
+Here project_name you will have to write the name of your project you want to build.
+
+According to the language you have used above, if it is Azle or Motoko, These  commands will generate all default and necessary files to deploy your first DApp including  sample codes.
+
+  1. Navigate the created folder (will be named as the name you have specific while creating a new project using Motoko or Azle) and open it in vs code.
+  2. Open vs code terminal then run this command to deploy your DApp
+
+   dfx start –background –clean   dfx deploy
+ 
+ 
+After successfully deploying your DApp you will  then get  the green link to browse your DApp including  your canister ID.
